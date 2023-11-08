@@ -34,17 +34,17 @@ main()
   show_empty_plugins=$(get_tmux_option "@dracula-show-empty-plugins" true)
 
   # Dracula Color Pallette
-  white='#f8f8f2'
-  gray='#44475a'
-  dark_gray='#282a36'
-  light_purple='#bd93f9'
+  white='#D4D8DF'
+  gray='#323842'
+  dark_gray='#282C34'
+  light_purple='#C678DD'
   dark_purple='#6272a4'
-  cyan='#8be9fd'
-  green='#50fa7b'
-  orange='#ffb86c'
-  red='#ff5555'
-  pink='#ff79c6'
-  yellow='#f1fa8c'
+  cyan='#61AFEF'
+  green='#98C379'
+  orange='#e0896c'
+  red='#E06C75'
+  pink='#e06cae'
+  yellow='#E5C07B'
 
   # Handle left icon configuration
   case $show_left_icon in
@@ -148,7 +148,7 @@ main()
       IFS=' ' read -r -a colors  <<< $(get_tmux_option "@dracula-cwd-colors" "dark_gray white")
       tmux set-option -g status-right-length 250
       script="#($current_dir/cwd.sh)"
-    
+
     elif [ $plugin = "fossil" ]; then
       IFS=' ' read -r -a colors  <<< $(get_tmux_option "@dracula-fossil-colors" "green dark_gray")
       tmux set-option -g status-right-length 250
